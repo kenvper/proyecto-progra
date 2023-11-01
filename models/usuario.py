@@ -1,12 +1,10 @@
 class Usuario(object):
-    def __init__(self,id,nombre,apellido,email,usuario,password) -> None:
-        self.id = id
+    def __init__(self,nombre,apellido,usuario,password,estado=True) -> None:
         self.nombre = nombre
         self.apellido = apellido
-        self.email = email
         self.usuario = usuario
         self.password = password
-        self.estado = True
+        self.estado = estado
         
 
     def cambiar_estado(self):
@@ -17,5 +15,5 @@ class Usuario(object):
             self.estado = True
         
     def __str__(self) -> str:
-        return f"Usuario: {self.id} - {self.nombre} - {self.apellido} - {self.email} - {self.usuario} - {self.estado}"
+        return f"Usuario:  {self.nombre} - {self.apellido} - {self.usuario} - {self.estado}"
        
